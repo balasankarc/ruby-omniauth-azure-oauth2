@@ -1,0 +1,17 @@
+Description: Remove usage of git in gemspec
+Author: Balasankar C <balasankarc@autistici.org>
+Last-Update: 2016-01-14
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/omniauth-azure-oauth2.gemspec
++++ b/omniauth-azure-oauth2.gemspec
+@@ -8,9 +8,6 @@
+   gem.summary       = %q{An Windows Azure Active Directory OAuth2 strategy for OmniAuth}
+   gem.homepage      = "https://github.com/KonaTeam/omniauth-azure-oauth2"
+ 
+-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+-  gem.files         = `git ls-files`.split("\n")
+-  gem.test_files    = `git ls-files -- {spec}/*`.split("\n")
+   gem.name          = "omniauth-azure-oauth2"
+   gem.require_paths = ["lib"]
+   gem.version       = OmniAuth::AzureOauth2::VERSION

@@ -1,0 +1,12 @@
+Description: Remove usage of bundler in tests
+Author: Balasankar C <balasankarc@autistici.org>
+Last-Update: 2016-01-14
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -1,2 +1 @@
+-require File.join('bundler', 'setup')
+-require 'rspec'
+\ No newline at end of file
++require 'rspec'
